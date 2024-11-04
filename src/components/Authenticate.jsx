@@ -5,8 +5,8 @@ const Authenticate = ({ token }) => {
   const [error, setError] = useState(null);
 
   const handleClick = async () => {
-    setError(null); // Reset error state
-    setSuccessMessage(null); // Reset success message
+    setError(null); 
+    setSuccessMessage(null); 
 
     if (!token) {
       setError("No token available. Please sign up first.");
