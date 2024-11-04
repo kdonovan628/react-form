@@ -7,7 +7,7 @@ const SignUpForm = ({ setToken }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setError(null); // reset error state before submission
+    setError(null); 
 
     try {
       const response = await fetch("https://fsa-jwt-practice.herokuapp.com/signup", {
@@ -22,7 +22,7 @@ const SignUpForm = ({ setToken }) => {
       });
 
       const result = await response.json();
-      console.log("Sign-Up Response:", result); // Debugging: Log the result
+      console.log("Sign-Up Response:", result);
 
       if (response.ok && result.token) {
         setToken(result.token);
@@ -38,7 +38,7 @@ const SignUpForm = ({ setToken }) => {
     <>
       <h2>Sign Up</h2>
 
-      {error && <p style={{ color: 'red' }}>{error}</p>} {/* Display error if it exists */}
+      {error && <p style={{ color: 'red' }}>{error}</p>}
 
       <form onSubmit={handleSubmit}>
         <label>
