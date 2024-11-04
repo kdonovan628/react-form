@@ -12,7 +12,7 @@ const App = () => {
       <SignUpForm setToken={setToken} />
       {token ? (
         <>
-          <p>Token: {token}</p> {/* Temporary display of token for debugging */}
+          <p>Token: {token}</p>
           <Authenticate token={token} />
         </>
       ) : (
